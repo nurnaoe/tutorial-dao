@@ -192,12 +192,25 @@ export const CRYPTODEVS_NFT_ABI = [
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "owner",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "_tokenId",
+                "type": "uint256"
             }
         ],
-        "name": "balanceOf",
+        "name": "available",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getPrice",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -211,22 +224,30 @@ export const CRYPTODEVS_NFT_ABI = [
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "owner",
-                "type": "address"
-            },
-            {
                 "internalType": "uint256",
-                "name": "index",
+                "name": "_tokenId",
                 "type": "uint256"
             }
         ],
-        "name": "tokenOfOwnerByIndex",
-        "outputs": [
+        "name": "purchase",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
             {
                 "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
+            }
+        ],
+        "name": "tokens",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
             }
         ],
         "stateMutability": "view",
