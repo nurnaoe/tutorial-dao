@@ -253,7 +253,7 @@ export default function Home() {
             Loading... Waiting for transaction...
           </div>
       );
-    } else if (nftBalance > 0) {
+    } else if (nftBalance == 0) {
       return (
           <div className={styles.description}>
             You do not own any CryptoDevs NFTs. <br />
